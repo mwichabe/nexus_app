@@ -130,7 +130,7 @@ class _QRScreenState extends State<QRScreen>
 
             const SizedBox(height: 32),
 
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 _QRAction(
@@ -138,13 +138,13 @@ class _QRScreenState extends State<QRScreen>
                   label: 'Share',
                   color: AppTheme.accentSecondary,
                 ),
-                const SizedBox(width: 24),
+                SizedBox(width: 24),
                 _QRAction(
                   icon: Icons.download_rounded,
                   label: 'Save',
                   color: AppTheme.accentTertiary,
                 ),
-                const SizedBox(width: 24),
+                SizedBox(width: 24),
                 _QRAction(
                   icon: Icons.copy_rounded,
                   label: 'Copy Link',
@@ -260,7 +260,7 @@ class _QRScreenState extends State<QRScreen>
 
   List<Widget> _buildCornerBrackets() {
     return [
-      Positioned(
+      const Positioned(
         top: 32,
         left: 32,
         child: _CornerBracket(rotated: false),
@@ -271,7 +271,7 @@ class _QRScreenState extends State<QRScreen>
         child: Transform(
           transform: Matrix4.rotationY(3.14),
           alignment: Alignment.center,
-          child: _CornerBracket(rotated: false),
+          child: const _CornerBracket(rotated: false),
         ),
       ),
       Positioned(
@@ -280,7 +280,7 @@ class _QRScreenState extends State<QRScreen>
         child: Transform(
           transform: Matrix4.rotationX(3.14),
           alignment: Alignment.center,
-          child: _CornerBracket(rotated: false),
+          child: const _CornerBracket(rotated: false),
         ),
       ),
       Positioned(
@@ -289,7 +289,7 @@ class _QRScreenState extends State<QRScreen>
         child: Transform(
           transform: Matrix4.rotationZ(3.14),
           alignment: Alignment.center,
-          child: _CornerBracket(rotated: false),
+          child: const _CornerBracket(rotated: false),
         ),
       ),
     ];

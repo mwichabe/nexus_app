@@ -137,9 +137,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     color: AppTheme.textSecondary,
                     letterSpacing: 0.5,
                   ),
-                )
-                    .animate(delay: 600.ms)
-                    .fadeIn(duration: 500.ms),
+                ).animate(delay: 600.ms).fadeIn(duration: 500.ms),
               ],
             ),
           ),
@@ -156,9 +154,9 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 2,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(2),
-                    child: LinearProgressIndicator(
+                    child: const LinearProgressIndicator(
                       backgroundColor: AppTheme.bgElevated,
-                      valueColor: const AlwaysStoppedAnimation<Color>(
+                      valueColor: AlwaysStoppedAnimation<Color>(
                         AppTheme.accentPrimary,
                       ),
                     ),

@@ -3,8 +3,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import '../../providers/app_provider.dart';
-import '../../models/models.dart';
-import '../../models/dummy_data.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/bank_card_widget.dart';
 import '../../widgets/transaction_tile.dart';
@@ -12,7 +10,6 @@ import '../deposit_screen.dart';
 import '../withdraw_screen.dart';
 import '../transfer_screen.dart';
 import '../pay_bills_screen.dart';
-import '../transactions_screen.dart';
 import '../qr_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -151,10 +148,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ],
-      )
-          .animate()
-          .fadeIn(duration: 400.ms)
-          .slideY(begin: -0.2, end: 0),
+      ).animate().fadeIn(duration: 400.ms).slideY(begin: -0.2, end: 0),
     );
   }
 
@@ -492,8 +486,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildRecentTransactions(
-      BuildContext context, AppProvider provider) {
+  Widget _buildRecentTransactions(BuildContext context, AppProvider provider) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -526,14 +519,15 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         ...provider.recentTransactions.asMap().entries.map(
-          (entry) => Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
-            child: TransactionTile(transaction: entry.value)
-                .animate(delay: (entry.key * 60).ms + 100.ms)
-                .fadeIn(duration: 300.ms)
-                .slideX(begin: 0.1, end: 0),
-          ),
-        ),
+              (entry) => Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
+                child: TransactionTile(transaction: entry.value)
+                    .animate(delay: (entry.key * 60).ms + 100.ms)
+                    .fadeIn(duration: 300.ms)
+                    .slideX(begin: 0.1, end: 0),
+              ),
+            ),
       ],
     );
   }

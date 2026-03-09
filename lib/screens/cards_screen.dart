@@ -111,8 +111,7 @@ class _CardsScreenState extends State<CardsScreen> {
                               label: 'Card Number',
                               value: _showCardNumber
                                   ? card.cardNumber
-                                      .replaceAllMapped(
-                                          RegExp(r'.{4}'),
+                                      .replaceAllMapped(RegExp(r'.{4}'),
                                           (m) => '${m.group(0)} ')
                                       .trim()
                                   : card.maskedNumber,
@@ -179,7 +178,7 @@ class _CardsScreenState extends State<CardsScreen> {
                         mainAxisSpacing: 12,
                         crossAxisSpacing: 12,
                         childAspectRatio: 2.5,
-                        children: [
+                        children: const [
                           _CardActionTile(
                             icon: Icons.block_rounded,
                             label: 'Freeze Card',
@@ -245,8 +244,7 @@ class _CardsScreenState extends State<CardsScreen> {
             const SizedBox(height: 8),
             const Text(
               'Link an existing card to your account',
-              style: TextStyle(
-                  fontSize: 14, color: AppTheme.textSecondary),
+              style: TextStyle(fontSize: 14, color: AppTheme.textSecondary),
             ),
             const SizedBox(height: 24),
             _buildTextField(hint: 'Card Number'),

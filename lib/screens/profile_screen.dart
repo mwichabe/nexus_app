@@ -65,8 +65,8 @@ class ProfileScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                             color: AppTheme.bgCard,
                             shape: BoxShape.circle,
-                            border: Border.all(
-                                color: AppTheme.bgPrimary, width: 2),
+                            border:
+                                Border.all(color: AppTheme.bgPrimary, width: 2),
                           ),
                           child: const Icon(
                             Icons.camera_alt_rounded,
@@ -112,24 +112,24 @@ class ProfileScreen extends StatelessWidget {
 
                   // Verified badge
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 14, vertical: 6),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                     decoration: BoxDecoration(
                       color: AppTheme.accentPrimary.withOpacity(0.12),
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
                           color: AppTheme.accentPrimary.withOpacity(0.3)),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.verified_rounded,
                           size: 14,
                           color: AppTheme.accentPrimary,
                         ),
-                        const SizedBox(width: 6),
-                        const Text(
+                        SizedBox(width: 6),
+                        Text(
                           'Verified Account',
                           style: TextStyle(
                             fontSize: 12,
@@ -159,11 +159,11 @@ class ProfileScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    _StatItem(label: 'Transactions', value: '124'),
+                    const _StatItem(label: 'Transactions', value: '124'),
                     _Divider(),
-                    _StatItem(label: 'Contacts', value: '28'),
+                    const _StatItem(label: 'Contacts', value: '28'),
                     _Divider(),
-                    _StatItem(label: 'Member Since', value: "2022"),
+                    const _StatItem(label: 'Member Since', value: "2022"),
                   ],
                 ),
               ).animate(delay: 200.ms).fadeIn(duration: 400.ms),
@@ -178,28 +178,28 @@ class ProfileScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 8),
-                  _SectionTitle(title: 'Account'),
-                  _SettingsTile(
+                  const _SectionTitle(title: 'Account'),
+                  const _SettingsTile(
                     icon: Icons.person_rounded,
                     label: 'Personal Information',
                     color: AppTheme.accentSecondary,
                   ),
-                  _SettingsTile(
+                  const _SettingsTile(
                     icon: Icons.security_rounded,
                     label: 'Security & Privacy',
                     color: AppTheme.accentTertiary,
                   ),
-                  _SettingsTile(
+                  const _SettingsTile(
                     icon: Icons.notifications_rounded,
                     label: 'Notifications',
                     color: AppTheme.accentWarn,
                     trailing: _Badge(label: '3'),
                   ),
-                  _SettingsTile(
+                  const _SettingsTile(
                     icon: Icons.language_rounded,
                     label: 'Language & Region',
-                    color: const Color(0xFF4FC3F7),
-                    trailing: const Text(
+                    color: Color(0xFF4FC3F7),
+                    trailing: Text(
                       'English',
                       style: TextStyle(
                         fontSize: 13,
@@ -209,44 +209,44 @@ class ProfileScreen extends StatelessWidget {
                   ),
 
                   const SizedBox(height: 24),
-                  _SectionTitle(title: 'Finance'),
-                  _SettingsTile(
+                  const _SectionTitle(title: 'Finance'),
+                  const _SettingsTile(
                     icon: Icons.account_balance_rounded,
                     label: 'Linked Bank Accounts',
                     color: AppTheme.accentPrimary,
                   ),
-                  _SettingsTile(
+                  const _SettingsTile(
                     icon: Icons.credit_card_rounded,
                     label: 'Manage Cards',
-                    color: const Color(0xFFFF80AB),
+                    color: Color(0xFFFF80AB),
                   ),
-                  _SettingsTile(
+                  const _SettingsTile(
                     icon: Icons.receipt_long_rounded,
                     label: 'Transaction Limits',
                     color: AppTheme.accentWarn,
                   ),
-                  _SettingsTile(
+                  const _SettingsTile(
                     icon: Icons.trending_up_rounded,
                     label: 'Investment Portfolio',
-                    color: const Color(0xFF69F0AE),
+                    color: Color(0xFF69F0AE),
                   ),
 
                   const SizedBox(height: 24),
-                  _SectionTitle(title: 'Support'),
-                  _SettingsTile(
+                  const _SectionTitle(title: 'Support'),
+                  const _SettingsTile(
                     icon: Icons.help_rounded,
                     label: 'Help Center',
                     color: AppTheme.accentSecondary,
                   ),
-                  _SettingsTile(
+                  const _SettingsTile(
                     icon: Icons.chat_rounded,
                     label: 'Live Chat Support',
                     color: AppTheme.accentTertiary,
                   ),
-                  _SettingsTile(
+                  const _SettingsTile(
                     icon: Icons.star_rounded,
                     label: 'Rate Nexus',
-                    color: const Color(0xFFFFB836),
+                    color: Color(0xFFFFB836),
                   ),
 
                   const SizedBox(height: 24),
@@ -256,8 +256,7 @@ class ProfileScreen extends StatelessWidget {
                     onTap: () {
                       context.read<AuthProvider>().logout();
                       Navigator.of(context).pushAndRemoveUntil(
-                        MaterialPageRoute(
-                            builder: (_) => const PinScreen()),
+                        MaterialPageRoute(builder: (_) => const PinScreen()),
                         (route) => false,
                       );
                     },
@@ -270,13 +269,13 @@ class ProfileScreen extends StatelessWidget {
                         border: Border.all(
                             color: AppTheme.accentRed.withOpacity(0.2)),
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Icon(Icons.logout_rounded,
+                          Icon(Icons.logout_rounded,
                               color: AppTheme.accentRed, size: 20),
-                          const SizedBox(width: 10),
-                          const Text(
+                          SizedBox(width: 10),
+                          Text(
                             'Sign Out',
                             style: TextStyle(
                               fontSize: 15,

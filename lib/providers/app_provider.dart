@@ -4,9 +4,9 @@ import '../models/dummy_data.dart';
 import '../theme/app_theme.dart';
 
 class AppProvider extends ChangeNotifier {
-  List<Transaction> _transactions = List.from(DummyData.transactions);
-  List<BankCard> _cards = List.from(DummyData.cards);
-  List<Contact> _contacts = List.from(DummyData.contacts);
+  final List<Transaction> _transactions = List.from(DummyData.transactions);
+  final List<BankCard> _cards = List.from(DummyData.cards);
+  final List<Contact> _contacts = List.from(DummyData.contacts);
   int _selectedCardIndex = 0;
   bool _balanceVisible = true;
   int _selectedNavIndex = 0;

@@ -123,7 +123,8 @@ class SuccessScreen extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        _ReceiptRow(label: 'Amount',
+                        _ReceiptRow(
+                            label: 'Amount',
                             value: '\$${formatter.format(amount)}',
                             isHighlight: true),
                         const Divider(height: 24, color: AppTheme.borderColor),
@@ -133,10 +134,13 @@ class SuccessScreen extends StatelessWidget {
                         const SizedBox(height: 8),
                         _ReceiptRow(
                           label: 'Reference',
-                          value: 'NXS${DateTime.now().millisecondsSinceEpoch.toString().substring(8)}',
+                          value:
+                              'NXS${DateTime.now().millisecondsSinceEpoch.toString().substring(8)}',
                         ),
                         const SizedBox(height: 8),
-                        _ReceiptRow(label: 'Status', value: 'Completed',
+                        const _ReceiptRow(
+                            label: 'Status',
+                            value: 'Completed',
                             statusColor: AppTheme.accentTertiary),
                       ],
                     ),
@@ -182,9 +186,7 @@ class SuccessScreen extends StatelessWidget {
                         ),
                       ),
                     ],
-                  )
-                      .animate(delay: 500.ms)
-                      .fadeIn(duration: 400.ms),
+                  ).animate(delay: 500.ms).fadeIn(duration: 400.ms),
                 ],
               ),
             ),
@@ -225,7 +227,8 @@ class _ReceiptRow extends StatelessWidget {
           style: TextStyle(
             fontSize: isHighlight ? 18 : 13,
             fontWeight: isHighlight ? FontWeight.w800 : FontWeight.w600,
-            color: statusColor ?? (isHighlight ? AppTheme.accentPrimary : AppTheme.textPrimary),
+            color: statusColor ??
+                (isHighlight ? AppTheme.accentPrimary : AppTheme.textPrimary),
             letterSpacing: isHighlight ? -0.5 : 0,
           ),
         ),

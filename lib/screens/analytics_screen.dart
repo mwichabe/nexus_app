@@ -31,10 +31,10 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
           body: CustomScrollView(
             physics: const BouncingScrollPhysics(),
             slivers: [
-              SliverAppBar(
+              const SliverAppBar(
                 backgroundColor: AppTheme.bgPrimary,
                 pinned: true,
-                title: const Text(
+                title: Text(
                   'Analytics',
                   style: TextStyle(
                     fontSize: 20,
@@ -43,7 +43,6 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                   ),
                 ),
               ),
-
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(24, 8, 24, 0),
@@ -69,8 +68,8 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                                     setState(() => _selectedPeriod = i),
                                 child: AnimatedContainer(
                                   duration: const Duration(milliseconds: 200),
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 10),
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 10),
                                   decoration: BoxDecoration(
                                     color: isSelected
                                         ? AppTheme.accentPrimary
@@ -197,10 +196,10 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                                         (entry) => PieChartSectionData(
                                           value: entry.value.amount,
                                           color: entry.value.color,
-                                          radius: _touchedCategoryIndex ==
-                                                  entry.key
-                                              ? 52
-                                              : 44,
+                                          radius:
+                                              _touchedCategoryIndex == entry.key
+                                                  ? 52
+                                                  : 44,
                                           showTitle: false,
                                         ),
                                       )
@@ -274,20 +273,19 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                       ),
                       const SizedBox(height: 16),
                       ...DummyData.savingsGoals.asMap().entries.map(
-                        (entry) => Padding(
-                          padding: const EdgeInsets.only(bottom: 12),
-                          child: _SavingsGoalCard(
-                            goal: entry.value,
-                          )
-                              .animate(delay: (entry.key * 80 + 300).ms)
-                              .fadeIn(duration: 300.ms),
-                        ),
-                      ),
+                            (entry) => Padding(
+                              padding: const EdgeInsets.only(bottom: 12),
+                              child: _SavingsGoalCard(
+                                goal: entry.value,
+                              )
+                                  .animate(delay: (entry.key * 80 + 300).ms)
+                                  .fadeIn(duration: 300.ms),
+                            ),
+                          ),
                     ],
                   ),
                 ),
               ),
-
               const SliverToBoxAdapter(child: SizedBox(height: 24)),
             ],
           ),
@@ -304,18 +302,18 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
           drawHorizontalLine: true,
           drawVerticalLine: false,
           horizontalInterval: 1000,
-          getDrawingHorizontalLine: (value) => FlLine(
+          getDrawingHorizontalLine: (value) => const FlLine(
             color: AppTheme.borderColor,
             strokeWidth: 1,
           ),
         ),
         titlesData: FlTitlesData(
-          leftTitles: const AxisTitles(
-              sideTitles: SideTitles(showTitles: false)),
-          rightTitles: const AxisTitles(
-              sideTitles: SideTitles(showTitles: false)),
-          topTitles: const AxisTitles(
-              sideTitles: SideTitles(showTitles: false)),
+          leftTitles:
+              const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          rightTitles:
+              const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          topTitles:
+              const AxisTitles(sideTitles: SideTitles(showTitles: false)),
           bottomTitles: AxisTitles(
             sideTitles: SideTitles(
               showTitles: true,
@@ -443,9 +441,7 @@ class _SummaryCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
             decoration: BoxDecoration(
-              color: (isPositive
-                      ? AppTheme.accentTertiary
-                      : AppTheme.accentRed)
+              color: (isPositive ? AppTheme.accentTertiary : AppTheme.accentRed)
                   .withOpacity(0.15),
               borderRadius: BorderRadius.circular(6),
             ),
@@ -454,9 +450,8 @@ class _SummaryCard extends StatelessWidget {
               style: TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.w700,
-                color: isPositive
-                    ? AppTheme.accentTertiary
-                    : AppTheme.accentRed,
+                color:
+                    isPositive ? AppTheme.accentTertiary : AppTheme.accentRed,
               ),
             ),
           ),
@@ -539,8 +534,7 @@ class _SavingsGoalCard extends StatelessWidget {
             child: LinearProgressIndicator(
               value: progress,
               backgroundColor: AppTheme.bgElevated,
-              valueColor:
-                  AlwaysStoppedAnimation<Color>(goal.color as Color),
+              valueColor: AlwaysStoppedAnimation<Color>(goal.color as Color),
               minHeight: 8,
             ),
           ),

@@ -116,32 +116,32 @@ class DummyData {
   ];
 
   static final List<BankCard> cards = [
-    BankCard(
+    const BankCard(
       id: 'c1',
       cardNumber: '4532123456789012',
       cardHolder: 'Alex Morgan',
       expiryDate: '12/27',
       cvv: '456',
       bankName: 'Nexus Bank',
-      balance: 12_847.55,
+      balance: 12847.55,
       type: CardType.visa,
-      gradientColors: [const Color(0xFF1A1A35), const Color(0xFF0D0D20)],
+      gradientColors: [Color(0xFF1A1A35), Color(0xFF0D0D20)],
     ),
-    BankCard(
+    const BankCard(
       id: 'c2',
       cardNumber: '5301234567890123',
       cardHolder: 'Alex Morgan',
       expiryDate: '08/26',
       cvv: '789',
       bankName: 'Nexus Savings',
-      balance: 35_210.00,
+      balance: 35210.00,
       type: CardType.mastercard,
-      gradientColors: [const Color(0xFF1A2A1A), const Color(0xFF0D1A0D)],
+      gradientColors: [Color(0xFF1A2A1A), Color(0xFF0D1A0D)],
     ),
   ];
 
   static final List<Contact> contacts = [
-    Contact(
+    const Contact(
       id: 'u1',
       name: 'Sarah Chen',
       phone: '+254 712 345 678',
@@ -149,7 +149,7 @@ class DummyData {
       avatarColor: AppTheme.accentSecondary,
       accountNumber: '1234567890',
     ),
-    Contact(
+    const Contact(
       id: 'u2',
       name: 'James Odhiambo',
       phone: '+254 723 456 789',
@@ -157,7 +157,7 @@ class DummyData {
       avatarColor: AppTheme.accentTertiary,
       accountNumber: '0987654321',
     ),
-    Contact(
+    const Contact(
       id: 'u3',
       name: 'Priya Sharma',
       phone: '+254 734 567 890',
@@ -165,61 +165,61 @@ class DummyData {
       avatarColor: AppTheme.accentWarn,
       accountNumber: '1122334455',
     ),
-    Contact(
+    const Contact(
       id: 'u4',
       name: 'Kevin Mwangi',
       phone: '+254 745 678 901',
       initials: 'KM',
-      avatarColor: const Color(0xFFFF80AB),
+      avatarColor: Color(0xFFFF80AB),
       accountNumber: '5544332211',
     ),
-    Contact(
+    const Contact(
       id: 'u5',
       name: 'Amina Hassan',
       phone: '+254 756 789 012',
       initials: 'AH',
-      avatarColor: const Color(0xFFFFB836),
+      avatarColor: Color(0xFFFFB836),
       accountNumber: '6677889900',
     ),
   ];
 
   static final List<SpendingCategory> spendingCategories = [
-    SpendingCategory(
+    const SpendingCategory(
       label: 'Shopping',
       amount: 374.80,
       percentage: 32,
       color: AppTheme.accentWarn,
       icon: Icons.shopping_bag_rounded,
     ),
-    SpendingCategory(
+    const SpendingCategory(
       label: 'Food',
       amount: 215.50,
       percentage: 18,
-      color: const Color(0xFFFFB836),
+      color: Color(0xFFFFB836),
       icon: Icons.restaurant_rounded,
     ),
-    SpendingCategory(
+    const SpendingCategory(
       label: 'Transport',
       amount: 120.00,
       percentage: 10,
       color: AppTheme.accentTertiary,
       icon: Icons.directions_car_rounded,
     ),
-    SpendingCategory(
+    const SpendingCategory(
       label: 'Entertainment',
       amount: 95.99,
       percentage: 8,
-      color: const Color(0xFFFF80AB),
+      color: Color(0xFFFF80AB),
       icon: Icons.movie_rounded,
     ),
-    SpendingCategory(
+    const SpendingCategory(
       label: 'Utilities',
       amount: 178.00,
       percentage: 15,
-      color: const Color(0xFF4FC3F7),
+      color: Color(0xFF4FC3F7),
       icon: Icons.bolt_rounded,
     ),
-    SpendingCategory(
+    const SpendingCategory(
       label: 'Others',
       amount: 200.00,
       percentage: 17,
@@ -260,15 +260,47 @@ class DummyData {
 
   // Monthly spending data for chart
   static final List<double> monthlySpending = [
-    1200, 980, 1450, 1100, 1600, 1380, 1250, 1700, 1420, 1850, 1300, 1184
+    1200,
+    980,
+    1450,
+    1100,
+    1600,
+    1380,
+    1250,
+    1700,
+    1420,
+    1850,
+    1300,
+    1184
   ];
 
   static final List<double> monthlyIncome = [
-    4200, 4200, 4850, 4850, 5100, 4850, 5200, 5200, 5600, 5600, 5600, 5600
+    4200,
+    4200,
+    4850,
+    4850,
+    5100,
+    4850,
+    5200,
+    5200,
+    5600,
+    5600,
+    5600,
+    5600
   ];
 
   static const List<String> months = [
-    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec'
   ];
 }

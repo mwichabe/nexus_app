@@ -6,7 +6,7 @@ enum AuthState { unauthenticated, authenticating, authenticated, error }
 
 class AuthProvider extends ChangeNotifier {
   final LocalAuthentication _localAuth = LocalAuthentication();
-  
+
   AuthState _state = AuthState.unauthenticated;
   String _errorMessage = '';
   bool _biometricsAvailable = false;
@@ -83,7 +83,7 @@ class AuthProvider extends ChangeNotifier {
         _errorMessage = 'Too many attempts. Please try again later.';
       } else {
         _state = AuthState.unauthenticated;
-        _errorMessage = 'Incorrect PIN. ${remainingAttempts} attempts remaining.';
+        _errorMessage = 'Incorrect PIN. $remainingAttempts attempts remaining.';
       }
       notifyListeners();
       return false;
