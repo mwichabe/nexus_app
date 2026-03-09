@@ -1,0 +1,63 @@
+name: nexus_app
+description: Nexus - Premium Fintech Banking App
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # UI & Animation
+  google_fonts: ^6.1.0
+  flutter_animate: ^4.3.0
+  animations: ^2.0.8
+  shimmer: ^3.0.0
+  lottie: ^2.7.0
+  fl_chart: ^0.65.0
+  
+  # State Management
+  provider: ^6.1.1
+  
+  # Local Auth (Biometrics + PIN)
+  local_auth: ^2.1.8
+  
+  # Storage
+  shared_preferences: ^2.2.2
+  flutter_secure_storage: ^9.0.0
+  
+  # Utils
+  intl: ^0.18.1
+  uuid: ^4.2.2
+  pin_code_fields: ^8.0.1
+  
+  # Icons
+  cupertino_icons: ^1.0.6
+  iconsax: ^0.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+  
+  fonts:
+    - family: Clash
+      fonts:
+        - asset: assets/fonts/ClashDisplay-Regular.ttf
+        - asset: assets/fonts/ClashDisplay-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/ClashDisplay-Semibold.ttf
+          weight: 600
+        - asset: assets/fonts/ClashDisplay-Bold.ttf
+          weight: 700
