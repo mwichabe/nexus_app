@@ -105,7 +105,7 @@ class _QRScreenState extends State<QRScreen>
                   ),
                   const SizedBox(height: 16),
                   const Text(
-                    'Alex Morgan',
+                    'Collins Mwichabe',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,

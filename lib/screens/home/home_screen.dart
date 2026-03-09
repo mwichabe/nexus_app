@@ -82,7 +82,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 2),
                 const Text(
-                  'Alex Morgan',
+                  'Collins Mwichabe',
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w700,
@@ -138,7 +138,7 @@ class HomeScreen extends StatelessWidget {
             ),
             child: const Center(
               child: Text(
-                'AM',
+                'CM',
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w700,

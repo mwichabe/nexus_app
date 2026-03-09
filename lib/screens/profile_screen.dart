@@ -89,7 +89,7 @@ class ProfileScreen extends StatelessWidget {
                   const SizedBox(height: 16),
 
                   const Text(
-                    'Alex Morgan',
+                    'Collins Mwichabe',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w800,

@@ -119,7 +119,7 @@ class DummyData {
     const BankCard(
       id: 'c1',
       cardNumber: '4532123456789012',
-      cardHolder: 'Alex Morgan',
+      cardHolder: 'Collins Mwichabe',
       expiryDate: '12/27',
       cvv: '456',
       bankName: 'Nexus Bank',
@@ -130,7 +130,7 @@ class DummyData {
     const BankCard(
       id: 'c2',
       cardNumber: '5301234567890123',
-      cardHolder: 'Alex Morgan',
+      cardHolder: 'Collins Mwichabe',
       expiryDate: '08/26',
       cvv: '789',
       bankName: 'Nexus Savings',

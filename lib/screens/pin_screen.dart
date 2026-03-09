@@ -188,9 +188,7 @@ class _PinScreenState extends State<PinScreen>
                           begin: const Offset(0.8, 0.8),
                           end: const Offset(1, 1),
                         ),
-
                     const SizedBox(height: 24),
-
                     const Text(
                       'Welcome back,',
                       style: TextStyle(
@@ -199,11 +197,9 @@ class _PinScreenState extends State<PinScreen>
                         letterSpacing: 0.3,
                       ),
                     ).animate(delay: 100.ms).fadeIn(),
-
                     const SizedBox(height: 4),
-
                     const Text(
-                      'Alex Morgan',
+                      'Collins Mwichabe',
                       style: TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.w700,
@@ -236,9 +232,7 @@ class _PinScreenState extends State<PinScreen>
                           ),
                           textAlign: TextAlign.center,
                         ).animate(key: ValueKey(auth.errorMessage)).fadeIn(),
-
                         const SizedBox(height: 8),
-
                         const Text(
                           'Demo PIN: 1234',
                           style: TextStyle(
@@ -246,9 +240,7 @@ class _PinScreenState extends State<PinScreen>
                             color: AppTheme.textMuted,
                           ),
                         ),
-
                         const SizedBox(height: 32),
-
                         AnimatedBuilder(
                           animation: _shakeAnimation,
                           builder: (context, child) {
@@ -256,9 +248,10 @@ class _PinScreenState extends State<PinScreen>
                                 _shakeError ? (_shakeAnimation.value * 8) : 0;
                             return Transform.translate(
                               offset: Offset(
-                                shake * ((_shakeController.value * 10) % 2 == 0
-                                    ? 1
-                                    : -1),
+                                shake *
+                                    ((_shakeController.value * 10) % 2 == 0
+                                        ? 1
+                                        : -1),
                                 0,
                               ),
                               child: child,
@@ -270,8 +263,8 @@ class _PinScreenState extends State<PinScreen>
                               _pinLength,
                               (i) => AnimatedContainer(
                                 duration: const Duration(milliseconds: 200),
-                                margin: const EdgeInsets.symmetric(
-                                    horizontal: 10),
+                                margin:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 width: 16,
                                 height: 16,
                                 decoration: BoxDecoration(
